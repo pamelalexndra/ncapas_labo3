@@ -32,6 +32,16 @@ public class SpecimenMapper {
                 .build();
     }
 
+    public SpecimenResponse toDto(Specimen specimen) {
+        return SpecimenResponse.builder()
+                .id(specimen.getId())
+                .name(specimen.getName())
+                .region(specimen.getRegion())
+                .dangerLevel(specimen.getDangerLevel())
+                .isFriendly(specimen.getIsFriendly())
+                .build();
+    }
+
     public PageableResponse<SpecimenResponse> toPageableResponse(Page<Specimen> page) {
         List<SpecimenResponse> content = page.getContent().stream()
                 .map(this::toDto)

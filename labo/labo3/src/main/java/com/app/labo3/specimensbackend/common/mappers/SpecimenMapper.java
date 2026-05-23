@@ -1,16 +1,18 @@
-package com.app.labo3.specimensbackend.mappers;
+package com.app.labo3.specimensbackend.common.mappers;
 
 import com.app.labo3.specimensbackend.domain.dto.request.CreateSpecimenRequest;
 import com.app.labo3.specimensbackend.domain.dto.request.UpdateSpecimenRequest;
 import com.app.labo3.specimensbackend.domain.dto.response.PageableResponse;
 import com.app.labo3.specimensbackend.domain.dto.response.SpecimenResponse;
-import com.app.labo3.specimensbackend.domain.entities.Specimen;
+import com.app.labo3.specimensbackend.domain.dto.entities.Specimen;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+@Component
 public class SpecimenMapper {
 
     public Specimen toEntityCreate(CreateSpecimenRequest request) {

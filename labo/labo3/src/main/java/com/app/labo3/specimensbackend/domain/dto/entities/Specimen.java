@@ -1,4 +1,4 @@
-package com.app.labo3.specimensbackend.domain.entities;
+package com.app.labo3.specimensbackend.domain.dto.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
